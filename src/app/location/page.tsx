@@ -1,12 +1,11 @@
 import { MapPin, Train, Bus, ParkingCircle, Clock } from "lucide-react";
 
-const address = "서울특별시 강남구 테헤란로 123"; // 실제 주소로 교체
+const address = "충남 계룡시 엄사면 엄사리 281"; // 실제 주소로 교체
 const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 
 const transports = [
-  { icon: Train, label: "지하철", desc: "2호선 강남역 3번 출구 도보 5분" },
   { icon: Bus, label: "버스", desc: "140, 360, 740번 정류장 하차" },
-  { icon: ParkingCircle, label: "주차", desc: "건물 지하 2층 (2시간 무료)" },
+  { icon: ParkingCircle, label: "주차", desc: "상가주차장이용" },
 ];
 
 const hours = [
@@ -73,8 +72,7 @@ export default function LocationPage() {
                 <h3 className="font-bold text-white">주소</h3>
               </div>
               <p className="text-slate-300 text-sm leading-relaxed mb-2">{address}</p>
-              <p className="text-slate-400 text-sm">삼성부동산 빌딩 2층</p>
-              <p className="text-slate-600 text-xs mt-4">※ 실제 주소로 변경해 주세요</p>
+              <p className="text-slate-400 text-sm">상가동 101호</p>
             </div>
 
             {/* 영업시간 */}

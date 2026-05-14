@@ -51,7 +51,7 @@ export default function RootLayout({
                   </li>
                   <li className="flex items-center gap-2.5">
                     <MapPin className="w-4 h-4 text-amber-500 flex-shrink-0" />
-                    <span>서울특별시 강남구 테헤란로 123</span>
+                    <span>충남 계룡시 엄사면 엄사리 281</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <Clock className="w-4 h-4 text-amber-500 flex-shrink-0" />
