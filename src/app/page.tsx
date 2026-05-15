@@ -161,7 +161,7 @@ export default function Home() {
           </h2>
           <p className="text-slate-400 mb-8 leading-relaxed">
             매매, 전세, 월세 모두 전문가가 직접 답변드립니다.<br />
-            첫 상담은 무료입니다.
+            상담은 무료입니다.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
