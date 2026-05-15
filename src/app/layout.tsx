@@ -11,16 +11,16 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: "삼성부동산 | 믿음직한 부동산 전문가",
-  description: "20년 경력의 공인중개사와 함께하는 삼성부동산. 아파트, 빌라, 상가 매매·전세·월세 전문.",
+  description: "정직한 상담과 책임감 있는 중개, 삼성부동산｜매매·전세·월세 전문",
   openGraph: {
     title: "삼성부동산 | 믿음직한 부동산 전문가",
-    description: "20년 경력의 공인중개사와 함께하는 삼성부동산. 아파트, 빌라, 상가 매매·전세·월세 전문.",
+    description: "정직한 상담과 책임감 있는 중개, 삼성부동산｜매매·전세·월세 전문",
     images: [{ url: "/og-image.png" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "삼성부동산 | 믿음직한 부동산 전문가",
-    description: "20년 경력의 공인중개사와 함께하는 삼성부동산. 아파트, 빌라, 상가 매매·전세·월세 전문.",
+    description: "정직한 상담과 책임감 있는 중개, 삼성부동산｜매매·전세·월세 전문",
     images: ["/og-image.png"],
   },
 };
