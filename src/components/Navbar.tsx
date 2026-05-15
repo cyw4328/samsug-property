@@ -28,11 +28,24 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
+  useEffect(() => {
+    if (!mobileOpen) return
+    const handler = (e: MouseEvent) => {
+      const header = document.getElementById('main-header')
+      if (header && !header.contains(e.target as Node)) {
+        setMobileOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [mobileOpen])
+
   // 홈에서는 상단 투명, 스크롤 시 불투명
   const transparent = isHome && !scrolled
 
   return (
     <header
+      id="main-header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         transparent
           ? 'bg-transparent'
