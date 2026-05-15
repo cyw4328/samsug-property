@@ -33,7 +33,7 @@ export default function AgentPage() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">공인중개사소개</h1>
           <p className="text-slate-400 text-lg max-w-xl">
-            20년 경력의 전문 공인중개사가 고객의 성공적인 거래를 함께합니다.
+            신뢰와 성실을 바탕으로 책임감 있는 중개와 정직한 <br/>상담으로 고객님의 소중한 선택에 함께하겠습니다
           </p>
         </div>
       </section>
@@ -60,13 +60,13 @@ export default function AgentPage() {
                 <div className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-2">
                   Licensed Real Estate Agent
                 </div>
-                <h2 className="text-3xl font-bold text-white mb-1">홍길동</h2>
-                <p className="text-slate-400 mb-6">경력 20년 · 공인중개사 자격증 보유</p>
+                <h2 className="text-3xl font-bold text-white mb-1">김홍서</h2>
+                <p className="text-slate-400 mb-6">공인중개사 자격증 보유 , 마성의 매력 소유자</p>
 
                 <p className="text-slate-300 leading-relaxed mb-8 text-sm">
-                  2005년 삼성부동산을 설립한 이래, 오직 고객의 이익을 최우선으로 생각하며 달려왔습니다.
-                  아파트부터 상업용 부동산까지 다양한 분야에서 3,000건 이상의 거래를 성공적으로
-                  완료했으며, 각 고객의 상황에 맞는 최적의 솔루션을 제공합니다.
+                  친절하게 해드립니다. 마성의 매력 소유자 기가 막히게 설명해드립니다. < br />
+
+                  고객과의 신뢰를 최우선으로, 성실하고 책임감 있는 중개로 최선의 결과를 만들어가겠습니다.
                 </p>
 
                 <div className="flex flex-wrap gap-3">
@@ -78,7 +78,7 @@ export default function AgentPage() {
                     전화 상담
                   </a>
                   <a
-                    href="mailto:contact@samsung-re.com"
+                    href="mailto:kus00342@naver.com"
                     className="flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
                   >
                     <Mail className="w-4 h-4" />
@@ -90,6 +90,7 @@ export default function AgentPage() {
           </div>
         </div>
       </section>
+
 
       {/* 자격증 & 경력 타임라인 */}
       <section className="py-20 px-5 bg-stone-50 section-pattern">

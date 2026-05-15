@@ -47,8 +47,9 @@ export default function Home() {
           </h1>
 
           <p className="animate-fade-in-delay-2 text-slate-400 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-            20년 경력의 공인중개사가 매매부터 전세·월세까지<br className="hidden md:block" />
-            고객의 소중한 자산을 안전하게 지켜드립니다.
+            신뢰와 성실을 바탕으로 고객 한 분 한 분의 <br className="hidden md:block" />
+            소중한 선택에 책임감 있게 함께하겠습니다. <br className="hidden md:block" />
+            정직한 상담과 꼼꼼한 중개로 최선을 다하겠습니다.
           </p>
 
           {/* CTA 버튼 */}

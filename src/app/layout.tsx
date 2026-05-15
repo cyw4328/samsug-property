@@ -36,8 +36,8 @@ export default function RootLayout({
                   <span className="text-white font-bold text-lg">삼성부동산</span>
                 </div>
                 <p className="text-sm leading-relaxed text-slate-500">
-                  20년 경력의 전문 공인중개사와 함께<br />
-                  소중한 자산을 안전하게 거래하세요.
+                  고객의 신뢰에 성실함과 책임감으로 <br />
+                  보답하겠습니다
                 </p>
               </div>
 
