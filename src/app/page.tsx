@@ -37,7 +37,7 @@ export default function Home() {
           {/* 배지 */}
           <div className="animate-fade-in inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold px-4 py-2 rounded-full mb-8 tracking-wide">
             <Star className="w-3.5 h-3.5" />
-            20년 전통의 신뢰받는 부동산
+            믿고 맡길수 있는 신뢰받는 부동산
           </div>
 
           {/* 헤딩 */}
