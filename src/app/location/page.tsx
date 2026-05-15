@@ -4,7 +4,7 @@ const address = "충남 계룡시 엄사면 엄사리 281"; // 실제 주소로 
 const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 
 const transports = [
-  { icon: Bus, label: "버스", desc: "140, 360, 740번 정류장 하차" },
+  { icon: Bus, label: "버스", desc: "45 , 48 , 100 , 200 , 300 , 302 , 303-1 , 305-1 , 202 , 302 , 2002 , 3002번 정류장 하차" },
   { icon: ParkingCircle, label: "주차", desc: "상가주차장이용" },
 ];
 
