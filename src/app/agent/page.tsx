@@ -39,7 +39,7 @@ export default function AgentPage() {
       </section>
 
       {/* 프로필 카드 */}
-      <section className="py-20 px-5">
+      <section className="pt-20 pb-6 px-5">
         <div className="max-w-6xl mx-auto">
           <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl overflow-hidden shadow-2xl">
             <div className="grid grid-cols-1 md:grid-cols-5">
@@ -91,6 +91,55 @@ export default function AgentPage() {
         </div>
       </section>
 
+      <section className="pt-6 pb-20 px-5">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl overflow-hidden shadow-2xl">
+            <div className="grid grid-cols-1 md:grid-cols-5">
+              {/* 프로필 이미지 영역 */}
+              <div className="md:col-span-2 bg-gradient-to-br from-amber-500/20 to-amber-600/10 flex items-center justify-center p-12">
+                <div className="relative">
+                  <div className="w-40 h-40 rounded-full bg-slate-700 border-4 border-amber-500/30 flex items-center justify-center shadow-xl">
+                    <Users className="w-16 h-16 text-slate-400" />
+                  </div>
+                  <div className="absolute -bottom-2 -right-2 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                    공인중개사
+                  </div>
+                </div>
+              </div>
+
+              {/* 프로필 정보 */}
+              <div className="md:col-span-3 p-10 flex flex-col justify-center">
+                <div className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-2">
+                  Licensed Real Estate Agent
+                </div>
+                <h2 className="text-3xl font-bold text-white mb-1">고혜림</h2>
+                <p className="text-slate-400 mb-6">공인중개사 자격증 보유</p>
+
+                <p className="text-slate-300 leading-relaxed mb-8 text-sm">
+                  오랜 현장 경험과 축적된 노하우를 바탕으로 정확한 분석과 책임감 있는 중개로 고객 만족을 실현하겠습니다.
+                </p>
+
+                <div className="flex flex-wrap gap-3">
+                  <a
+                      href="tel:010-4431-8205"
+                      className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
+                  >
+                    <Phone className="w-4 h-4" />
+                    전화 상담
+                  </a>
+                  <a
+                      href="mailto:kus00342@naver.com"
+                      className="flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
+                  >
+                    <Mail className="w-4 h-4" />
+                    이메일 문의
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 자격증 & 경력 타임라인 */}
       <section className="py-20 px-5 bg-stone-50 section-pattern">

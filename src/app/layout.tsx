@@ -82,7 +82,7 @@ export default function RootLayout({
 
             <div className="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-600">
               <span>© 2025 삼성부동산. All rights reserved.</span>
-              <span>공인중개사 등록번호 : 제00000호</span>
+              <span>공인중개사 등록번호 : 제 44250-2025-00002 호</span>
             </div>
           </div>
         </footer>
