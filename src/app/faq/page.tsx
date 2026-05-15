@@ -129,7 +129,7 @@ export default function FaqPage() {
                 온라인 상담신청
               </Link>
               <a
-                href="tel:02-000-0000"
+                href="tel:010-4431-8205"
                 className="flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors"
               >
                 <Phone className="w-3.5 h-3.5" />

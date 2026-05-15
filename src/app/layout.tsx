@@ -47,7 +47,7 @@ export default function RootLayout({
                 <ul className="space-y-2.5 text-sm">
                   <li className="flex items-center gap-2.5">
                     <Phone className="w-4 h-4 text-amber-500 flex-shrink-0" />
-                    <span>02-000-0000</span>
+                    <span>010-4431-8205</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <MapPin className="w-4 h-4 text-amber-500 flex-shrink-0" />

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { ClipboardList, CheckCircle2, Phone, Clock, Shield } from 'lucide-react'
+import { submitConsult } from './actions'
 
 const consultTypes = [
   { value: 'buy', label: '매매' },
@@ -13,20 +14,26 @@ const consultTypes = [
 
 const benefits = [
   { icon: Phone, title: "빠른 응답", desc: "영업일 기준 24시간 내 연락" },
-  { icon: Shield, title: "무료 상담", desc: "첫 상담은 완전 무료" },
+  { icon: Shield, title: "무료 상담", desc: "상담은 완전 무료" },
   { icon: Clock, title: "유연한 일정", desc: "방문 · 전화 모두 가능" },
 ]
 
 export default function ConsultPage() {
   const [form, setForm] = useState({ name: '', phone: '', type: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    setLoading(true)
+    const formData = new FormData(e.currentTarget)
+    formData.set('type', form.type)
+    await submitConsult(formData)
+    setLoading(false)
     setSubmitted(true)
   }
 
@@ -63,7 +70,7 @@ export default function ConsultPage() {
             Consultation
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">상담신청</h1>
-          <p className="text-slate-400 text-lg">전문 중개사가 직접 연락드립니다. 첫 상담은 무료입니다.</p>
+          <p className="text-slate-400 text-lg">전문 중개사가 직접 연락드립니다. 상담은 무료입니다.</p>
         </div>
       </section>
 
@@ -95,7 +102,7 @@ export default function ConsultPage() {
             {/* 전화 상담 */}
             <div className="bg-stone-50 rounded-2xl border border-slate-100 p-6 section-pattern">
               <div className="text-xs text-slate-500 mb-1 font-medium uppercase tracking-wide">전화 상담</div>
-              <div className="text-2xl font-bold text-slate-900 mb-1">02-000-0000</div>
+              <div className="text-2xl font-bold text-slate-900 mb-1">010-4431-8205</div>
               <div className="text-xs text-slate-400">평일 09:00 ~ 18:00 | 토 09:00 ~ 15:00</div>
             </div>
           </div>
@@ -171,10 +178,10 @@ export default function ConsultPage() {
 
               <button
                 type="submit"
-                disabled={!form.type}
+                disabled={!form.type || loading}
                 className="w-full bg-amber-500 hover:bg-amber-600 disabled:bg-slate-200 disabled:text-slate-400 text-white font-semibold py-3.5 rounded-xl transition-all shadow-sm shadow-amber-200 text-sm"
               >
-                상담 신청하기
+                {loading ? '전송 중...' : '상담 신청하기'}
               </button>
 
               <p className="text-center text-xs text-slate-400">

@@ -13,7 +13,7 @@ const navItems = [
   { label: '상담신청', href: '/consult' },
 ]
 
-const PROPERTY_URL = 'https://www.naver.com' // 실제 매물 URL로 교체
+const PROPERTY_URL = 'https://kus00342.neonet.co.kr/novo-agency-home/view/common/Home.neo?select_menu=M'
 
 export default function Navbar() {
   const pathname = usePathname()

@@ -171,11 +171,11 @@ export default function Home() {
               온라인 상담신청
             </Link>
             <a
-              href="tel:02-000-0000"
+              href="tel:010-4431-8205"
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all"
             >
               <Phone className="w-4 h-4" />
-              02-000-0000
+              010-4431-8205
             </a>
           </div>
         </div>
