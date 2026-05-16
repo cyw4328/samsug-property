@@ -10,7 +10,7 @@ const consultTypeLabels: Record<string, string> = {
   other: '기타',
 }
 
-export async function submitConsult(formData: FormData) {
+export async function submitConsult(formData: FormData): Promise<{ success: boolean; error?: string }> {
   const name = formData.get('name') as string
   const phone = formData.get('phone') as string
   const type = formData.get('type') as string
@@ -18,7 +18,7 @@ export async function submitConsult(formData: FormData) {
 
   const resend = new Resend(process.env.RESEND_API_KEY)
 
-  await resend.emails.send({
+  const { data, error } = await resend.emails.send({
     from: 'onboarding@resend.dev',
     to: process.env.CONSULT_TO_EMAIL!,
     subject: `[상담 신청] ${name} - ${consultTypeLabels[type] ?? type}`,
@@ -32,4 +32,12 @@ export async function submitConsult(formData: FormData) {
       </table>
     `,
   })
+
+  if (error) {
+    console.error('[Resend 발송 실패]', error)
+    return { success: false, error: error.message }
+  }
+
+  console.log('[Resend 발송 성공]', data)
+  return { success: true }
 }

@@ -22,6 +22,7 @@ export default function ConsultPage() {
   const [form, setForm] = useState({ name: '', phone: '', type: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -30,11 +31,16 @@ export default function ConsultPage() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setLoading(true)
+    setError(null)
     const formData = new FormData(e.currentTarget)
     formData.set('type', form.type)
-    await submitConsult(formData)
+    const result = await submitConsult(formData)
     setLoading(false)
-    setSubmitted(true)
+    if (result.success) {
+      setSubmitted(true)
+    } else {
+      setError(result.error ?? '전송에 실패했습니다. 잠시 후 다시 시도해 주세요.')
+    }
   }
 
   if (submitted) {
@@ -175,6 +181,12 @@ export default function ConsultPage() {
                   className="w-full bg-stone-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all resize-none placeholder:text-slate-400"
                 />
               </div>
+
+              {error && (
+                <p className="text-sm text-red-500 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+                  {error}
+                </p>
+              )}
 
               <button
                 type="submit"
